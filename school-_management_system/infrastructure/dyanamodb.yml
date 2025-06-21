@@ -1,0 +1,13 @@
+# infrastructure/dynamodb.yml
+Resources:
+  StudentTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: Students
+      AttributeDefinitions:
+        - AttributeName: student_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: student_id
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST

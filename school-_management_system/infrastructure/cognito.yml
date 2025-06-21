@@ -1,0 +1,13 @@
+# infrastructure/cognito.yml
+Resources:
+  UserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      UserPoolName: SchoolUserPool
+      AutoVerifiedAttributes: [email]
+  UserPoolClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      ClientName: WebAppClient
+      UserPoolId: !Ref UserPool
+      GenerateSecret: false

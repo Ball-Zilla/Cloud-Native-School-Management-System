@@ -1,0 +1,17 @@
+# infrastructure/api.yml
+Resources:
+  StudentApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: StudentApi
+
+  StudentFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: HandleStudentOps
+      Handler: student/index.handler
+      Runtime: nodejs18.x
+      Role: arn:aws:iam::<your-account>:role/<role-name>
+      Code:
+        S3Bucket: <your-lambda-code-bucket>
+        S3Key: student-handler.zip
