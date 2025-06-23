@@ -1,0 +1,16 @@
+{
+  "name": "cloud-native-school-management-system",
+  "version": "1.0.0",
+  "description": "A cloud-native school management system built with AWS services to manage students, teachers, attendance, grades, and communication.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "uuid": "^11.1.0"
+  }
+}
